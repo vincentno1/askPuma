@@ -54,3 +54,5 @@ firebase deploy --only apphosting:askpuma --project=askpuma-prod --account=vince
 ## 針具 Demo 白話版
 
 使用者要求快速看懂，針具案例主卡改顯示「乾淨針頭，減少感染風險。／替代治療，幫助戒癮。」並明示本站整理、非逐字原文。原摘錄完整移至可展開內容，沒有修改 data/sources.json。新增疾管署 Q&A 說明連結：https://www.cdc.gov.tw/Category/QAPage/NmDr6gAiK-xPxaejvJ-Lqw （2026-10-04 核對清潔針具、鴉片類藥癮替代治療說明）。本機 production build 通過。
+
+白話版於2026-10-04 14:36:29（Asia/Taipei）rollout build-2026-10-04-006 SUCCEEDED；部署程式 commit dac7666。正式 UI 已確認兩句新文案與原文展開入口，實際截圖 screenshots/needle-plain-live.jpg。
