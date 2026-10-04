@@ -9,3 +9,5 @@ blockquote{white-space:normal}
 @media(max-width:767px){.playful-result .result-mascot{width:48%}.playful-roast{width:54%;font-size:22px;line-height:1.6}.playful-disclaimer{max-width:53%}}
 
 .playful-roast>span{display:block}
+
+.source-takeaway{white-space:pre-line;overflow-wrap:anywhere;font-size:clamp(24px,2.6vw,35px);font-weight:900;line-height:1.5;letter-spacing:.015em}.original-excerpt{white-space:pre-line;font-weight:700}@media(max-width:600px){.source-takeaway{font-size:23px;line-height:1.6}}

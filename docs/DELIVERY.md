@@ -50,3 +50,7 @@ firebase deploy --only apphosting:askpuma --project=askpuma-prod --account=vince
 部署 CLI 曾過早回報前一輪完成，並有一次上一輪進行中造成409；沒有把 CLI exit code 當成最終驗證。以雲端 rollout 成功及正式頁面實際載入為準。公開 health HTTP 200。
 
 最終畫面核對：公開站已載入新 page chunk，住宅快取回答已把 POL01／imported_unchecked 轉成中文名稱；原文摘錄不變。Cloud Run 最新 ready revision 與100% traffic 均為 build-2026-10-04-005。首頁實際截圖：screenshots/home-live.jpg；爆炸頭：screenshots/afro-live.jpg；手機午餐：screenshots/lunch-mobile-live.jpg。正式瀏覽器已留在首頁，測試 viewport override 已恢復。
+
+## 針具 Demo 白話版
+
+使用者要求快速看懂，針具案例主卡改顯示「乾淨針頭，減少感染風險。／替代治療，幫助戒癮。」並明示本站整理、非逐字原文。原摘錄完整移至可展開內容，沒有修改 data/sources.json。新增疾管署 Q&A 說明連結：https://www.cdc.gov.tw/Category/QAPage/NmDr6gAiK-xPxaejvJ-Lqw （2026-10-04 核對清潔針具、鴉片類藥癮替代治療說明）。本機 production build 通過。
