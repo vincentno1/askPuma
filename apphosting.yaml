@@ -1,4 +1,4 @@
-# Applies at the first application build/rollout; no application deployed yet.
+# Firebase App Hosting runtime configuration; live deployment documented in docs/DELIVERY.md.
 runConfig:
   minInstances: 0
   maxInstances: 2

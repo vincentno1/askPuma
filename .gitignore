@@ -73,3 +73,6 @@ out/
 .dataconnect
 
 *.tsbuildinfo
+
+# Safe setup template only
+!.env.example
