@@ -17,6 +17,17 @@ export const paused = () => new AuditError('ANALYSIS_PAUSED',503,'新分析暫�
 export const hash = (value: string) => createHash('sha256').update(value).digest('hex');
 export const normalizeQuery = (query: string) => query.trim().replace(/\s+/g,' ').replace(/？/g,'?').replace(/！/g,'!').replace(/，/g,',');
 export const cacheKey = (query: string) => hash(JSON.stringify([normalizeQuery(query),DATA_VERSION,PROMPT_VERSION,MODEL_VERSION]));
+export function allowedOrigin(origin: string | null, requestOrigin: string) {
+  if (!origin) return true;
+  const allowed = new Set(['https://askpuma--askpuma-prod.asia-east1.hosted.app']);
+  const configured = process.env.PUBLIC_SITE_ORIGIN;
+  if (configured) { try { const url = new URL(configured); if(url.protocol==='https:' && url.origin===configured) allowed.add(configured); } catch { /* malformed configured origin is ignored */ } }
+  if (process.env.NODE_ENV !== 'production') {
+    try { const url = new URL(requestOrigin); if (['localhost','127.0.0.1','[::1]'].includes(url.hostname) && ['http:','https:'].includes(url.protocol)) allowed.add(url.origin); } catch { /* invalid internal URL is not trusted */ }
+  }
+  return allowed.has(origin);
+}
+
 export function signSession(id: string, secret: string) { return `${id}.${createHmac('sha256',secret).update(id).digest('base64url')}`; }
 export function sessionFromCookie(cookie: string | null, secret: string) {
   const value = cookie?.split(';').map(s=>s.trim()).find(s=>s.startsWith('askpuma_session='))?.slice(16);
@@ -31,7 +42,7 @@ export function sessionFromCookie(cookie: string | null, secret: string) {
 }
 export function preparedCases(): PreparedCase[] { return z.array(PreparedCaseSchema).parse(casesData); }
 export function localSources(): SourceRecord[] {
-  const all = [...z.array(SourceSchema).parse(sourcesData),...z.array(SourceSchema).parse(postsData)];
+  const all = [...z.array(SourceSchema).parse(postsData),...z.array(SourceSchema).parse(sourcesData)];
   return [...new Map(all.map(s=>[s.id,s])).values()].filter(s=>s.url.startsWith('https://'));
 }
 export function matchPrepared(query: string) {
