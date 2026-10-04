@@ -1,1 +1,153 @@
-[]
+[
+  {
+    "reviewedAliases": [],
+    "status": "ready",
+    "reviewedAt": "2026-10-04T05:54:02.808Z",
+    "dataVersion": "archive-v1-0650cf95bae9",
+    "promptVersion": "curated-editorial-v1",
+    "modelVersion": null,
+    "id": "needle-harm-reduction",
+    "canonicalQuery": "發針頭給吸毒者，是鼓勵吸毒嗎？",
+    "sourceRefs": [
+      "archive-829059d016f430dee65d",
+      "S03",
+      "S04",
+      "S01"
+    ],
+    "resultTemplate": {
+      "title": "這是減害政策，台北也有。",
+      "interactionMode": "factual",
+      "verdict": "missing_context",
+      "roast": "你以為找到黑料，結果找到市府服務。",
+      "summary": "清潔針具交換屬於減害措施，台北市也有相關官方服務資料。這能說明針具政策的性質，不能一次替所有毒品政策下結論。",
+      "claims": [
+        {
+          "id": "needle-1",
+          "claim": "發清潔針具就是鼓勵吸毒。",
+          "finding": "WHO把針具服務納入減害，台北市公布了清潔針具交換衛教諮詢站資料；不能把政策目的直接說成鼓勵吸毒。",
+          "relation": "context",
+          "sourceIds": [
+            "S03",
+            "S04"
+          ]
+        },
+        {
+          "id": "needle-2",
+          "claim": "2014年原文只是談提供乾淨針頭。",
+          "finding": "原文確實同時寫到提供毒品與乾淨針頭；供毒、針具交換、替代治療和校園篩檢需分別查核。",
+          "relation": "contradicts",
+          "sourceIds": [
+            "S01"
+          ]
+        }
+      ],
+      "limitations": [
+        "未核對Threads原頁；人物主卡顯示公開索引保存文字。",
+        "未由指南出版頁核對「不增加吸毒」等具體效果；不主張針具服務能杜絕毒品。",
+        "不能由市府服務存在推論市長不知道、反對或故意說謊。"
+      ],
+      "criticalLimitations": [
+        "針具交換與提供毒品需分開判斷。"
+      ],
+      "headlineSourceIds": [
+        "S03",
+        "S04"
+      ],
+      "heroCitation": {
+        "sourceId": "archive-829059d016f430dee65d",
+        "excerptId": "e1"
+      },
+      "mascotVariant": "detective",
+      "memeId": null
+    }
+  },
+  {
+    "reviewedAliases": [],
+    "status": "ready",
+    "reviewedAt": "2026-10-04T05:54:02.808Z",
+    "dataVersion": "archive-v1-0650cf95bae9",
+    "promptVersion": "curated-editorial-v1",
+    "modelVersion": null,
+    "id": "afro-battle-form",
+    "canonicalQuery": "為什麼要留爆炸頭？",
+    "sourceRefs": [],
+    "resultTemplate": {
+      "title": "你以為是髮型，其實是戰鬥型態。",
+      "interactionMode": "playful",
+      "verdict": null,
+      "roast": "別人出門整理頭髮，他出門裝備主角光環。",
+      "summary": "本站原創動漫旁白，聯想到《ONE PIECE》魯夫戴爆炸頭的橋段；不是本人說法，也不代表他真正留髮的原因。",
+      "claims": [],
+      "limitations": [
+        "確切動漫台詞未核對，文案為本站原創。",
+        "沒有本人公開說明，無法確認留髮動機。"
+      ],
+      "criticalLimitations": [
+        "動漫旁白，非本人說法。"
+      ],
+      "headlineSourceIds": [],
+      "heroCitation": null,
+      "mascotVariant": "afro",
+      "memeId": "original-afro-battle-form"
+    }
+  },
+  {
+    "reviewedAliases": [],
+    "status": "ready",
+    "reviewedAt": "2026-10-04T05:54:02.808Z",
+    "dataVersion": "archive-v1-0650cf95bae9",
+    "promptVersion": "curated-editorial-v1",
+    "modelVersion": null,
+    "id": "lunch-baseline-addon",
+    "canonicalQuery": "Puma 一下免費、一下自費，營養午餐髮夾彎？",
+    "sourceRefs": [
+      "archive-edc097955fdb126d7854",
+      "L02"
+    ],
+    "resultTemplate": {
+      "title": "目前方案：免費保底，自費加菜。",
+      "interactionMode": "factual",
+      "verdict": "missing_context",
+      "roast": "先看菜單，再決定要不要掀桌。",
+      "summary": "目前說明把免費基本保障與自費加菜選項並列，兩者可以同時存在。是否曾改變立場，仍需比較最早完整發言，不能只靠目前方案下定論。",
+      "claims": [
+        {
+          "id": "lunch-1",
+          "claim": "目前同時提免費與自費，方案自相矛盾。",
+          "finding": "官網把免費列為基本保障、自費加價列為品質選項；10月2日保存貼文也寫到由學校與家長討論自費加菜。",
+          "relation": "context",
+          "sourceIds": [
+            "L02",
+            "archive-edc097955fdb126d7854"
+          ]
+        },
+        {
+          "id": "lunch-2",
+          "claim": "他從9月17日至今完全沒有改變立場。",
+          "finding": "官網聲稱說法一致，但本次未取得9月17日完整原始發言；不能確定歷史上從未改變，也不能只看兩個詞就判定髮夾彎。",
+          "relation": "unresolved",
+          "sourceIds": [
+            "L02"
+          ]
+        }
+      ],
+      "limitations": [
+        "Instagram原頁尚未核對，主卡為公開索引保存版本。",
+        "官網是競選辦公室自我澄清；未以此單獨認定歷史一致性。",
+        "未驗證成本、供餐品質或政策執行成效。"
+      ],
+      "criticalLimitations": [
+        "目前方案可確認；早期完整發言尚待核對。"
+      ],
+      "headlineSourceIds": [
+        "L02"
+      ],
+      "heroCitation": {
+        "sourceId": "archive-edc097955fdb126d7854",
+        "excerptId": "e1"
+      },
+      "mascotVariant": "detective",
+      "memeId": null
+    }
+  }
+]

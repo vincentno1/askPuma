@@ -1,0 +1,32 @@
+{
+  "dataVersion": "archive-v1-0650cf95bae9",
+  "endpoint": "https://mayor2026.observe.tw/api/posts/shen-poyang.json",
+  "accountsEndpoint": "https://mayor2026.observe.tw/api/sources.json",
+  "archiveUrl": "https://mayor2026.observe.tw/taipei/shen-poyang/",
+  "retrievedAt": "2026-10-04T05:53:14.278Z",
+  "upstreamVersion": 1,
+  "upstreamCount": 732,
+  "importedCount": 731,
+  "snapshotSha256": "0650cf95bae9d1b1424190c5fb495752d9fb39ad5fa1d28a89acb6f72bc90529",
+  "accountsSha256": "28d614a71323a7d404cce8515dd0ff38318ae1470c23a9ea512f93a245b39f42",
+  "duplicateIdOrUrlCount": 1,
+  "repeatedTextAcrossDistinctRecords": 39,
+  "platformCounts": {
+    "threads": 187,
+    "instagram": 136,
+    "facebook": 222,
+    "youtube": 123,
+    "website": 62,
+    "x": 1
+  },
+  "earliestPublishedAt": "2025-01-15T01:55:32+00:00",
+  "latestPublishedAt": "2026-10-03T14:08:50+00:00",
+  "missingDateCount": 1,
+  "reviewStatus": "imported_unchecked",
+  "attribution": "貼文索引：2026 市長官方來源觀測站 https://mayor2026.observe.tw/about/",
+  "notes": [
+    "不包含所有歷史貼文；2014文章另列核心來源。",
+    "相同文字但不同平台的紀錄保留原始連結與日期，不把平台差異抹去。",
+    "上游AI分類未作查核依據；原作者保有內容權利，本站只展示相關短摘錄。"
+  ]
+}
