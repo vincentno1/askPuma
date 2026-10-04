@@ -136,5 +136,42 @@
     ],
     "contextNote": "本人競選網站的自我澄清，可確認目前方案說明；文中對9月17日發言的回顧不是完整原始影音，也不是歷史一致性的獨立證明。",
     "updatedAt": "2026-10-02T13:38:00+08:00"
+  },
+  {
+    "id": "POL01",
+    "title": "HEART 政策生態系｜空間、陪伴、交通與時間",
+    "url": "https://puma.taipei/heart",
+    "publisher": "沈伯洋競選官方網站",
+    "author": null,
+    "publishedAt": null,
+    "datePrecision": "unknown",
+    "retrievedAt": "2026-10-04T06:02:00.579Z",
+    "kind": "primary_statement",
+    "reviewStatus": "checked",
+    "origin": "direct",
+    "platform": "website",
+    "excerpts": [
+      {
+        "id": "e1",
+        "text": "從婚育宅、青年宅，到老宅改善",
+        "locator": "H 空間／Habitat，住宅與公共空間政策段落的連續短摘錄"
+      },
+      {
+        "id": "e2",
+        "text": "努力朝交通零死亡前進",
+        "locator": "R 韌性與安心／Resilience，交通政策段落的連續短摘錄"
+      },
+      {
+        "id": "e3",
+        "text": "透過家長喘息服務",
+        "locator": "A 陪伴／Accompany，家長支持段落的連續短摘錄"
+      },
+      {
+        "id": "e4",
+        "text": "TPASS 加入共享電動機車",
+        "locator": "T 時間／Time，通勤與日常服務段落的連續短摘錄"
+      }
+    ],
+    "contextNote": "2026-10-04 直接核對官方頁面的政策文字與網址，頁面未提供發布或更新日期，故留空。這是候選人的政策提案與目標，不代表已實施、預算已核定或已達成成效。H談青年居住、老宅與步行空間；A談家長支持；R談交通設計與安全；T談通勤選項。僅保存必要短摘錄，不能由願景判定能否兌現或保證交通零死亡。"
   }
 ]

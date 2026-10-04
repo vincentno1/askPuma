@@ -1,6 +1,6 @@
 {
-  "dataVersion": "archive-v2-0650cf95bae9",
-  "normalizationVersion": 2,
+  "dataVersion": "archive-v3-0650cf95bae9",
+  "normalizationVersion": 3,
   "endpoint": "https://mayor2026.observe.tw/api/posts/shen-poyang.json",
   "accountsEndpoint": "https://mayor2026.observe.tw/api/sources.json",
   "archiveUrl": "https://mayor2026.observe.tw/taipei/shen-poyang/",
@@ -29,6 +29,7 @@
     "不包含所有歷史貼文；2014文章另列核心來源。",
     "相同文字但不同平台的紀錄保留原始連結與日期，不把平台差異抹去。",
     "上游AI分類未作查核依據；原作者保有內容權利，本站只展示相關短摘錄。",
-    "原字連續摘錄按自然段／句界切分，目標300–700字；短貼文保持完整。全文只供後端索引，不公開完整資料集。"
+    "原字連續摘錄按自然段／句界切分，目標300–700字；短貼文保持完整。全文只供後端索引，不公開完整資料集。",
+    "v3另加官網HEART經核對政策提案短摘錄；提案不等於已實施或已達成成效。"
   ]
 }

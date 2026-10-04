@@ -13,7 +13,7 @@ const snapshotPath = resolve(root, "data/snapshots/shen-poyang.json");
 const accountsPath = resolve(root, "data/snapshots/upstream-sources.json");
 const metadataPath = resolve(root, "data/import-metadata.json");
 const sha = (text: string) => createHash("sha256").update(text).digest("hex");
-const normalizationVersion = 2;
+const normalizationVersion = 3;
 /** Exact contiguous text, grouped at paragraph/sentence boundaries; never paraphrase. */
 function segmentText(text: string) {
   const chars = Array.from(text);
