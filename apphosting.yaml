@@ -6,6 +6,16 @@ runConfig:
   cpu: 1
   memoryMiB: 1024
 
-# OPENAI_API_KEY exists in Secret Manager but has no version yet.
-# After supplying the real key, add a RUNTIME-only secret reference here.
-# Never put the key value or NEXT_PUBLIC_OPENAI_API_KEY in this file.
+env:
+  - variable: OPENAI_API_KEY
+    secret: OPENAI_API_KEY
+    availability:
+      - RUNTIME
+  - variable: GOOGLE_CLOUD_PROJECT
+    value: askpuma-prod
+    availability:
+      - RUNTIME
+  - variable: OPENAI_MODEL
+    value: gpt-6-astra
+    availability:
+      - RUNTIME

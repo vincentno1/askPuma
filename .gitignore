@@ -71,3 +71,5 @@ out/
 
 # dataconnect generated files
 .dataconnect
+
+*.tsbuildinfo
