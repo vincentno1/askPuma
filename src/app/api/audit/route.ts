@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { AuditError, InputSchema, cacheKey, curatedResult, matchPrepared, sessionFromCookie } from '@/server/core';
+import { AuditError, InputSchema, allowedOrigin, cacheKey, curatedResult, matchPrepared, sessionFromCookie } from '@/server/core';
 import { readLimit, reserve, savedResult, serviceConfig, settle, type Reservation } from '@/server/store';
 import { generate } from '@/server/model';
 export const runtime='nodejs';
@@ -14,7 +14,7 @@ export async function POST(request:NextRequest) {
   };
   try {
     if(Number(request.headers.get('content-length')||0)>8192) throw new AuditError('INVALID_INPUT',400,'問題最多500字。');
-    const origin=request.headers.get('origin'); if(origin && origin!==request.nextUrl.origin) throw new AuditError('INVALID_INPUT',400,'請從本站送出問題。');
+    const origin=request.headers.get('origin'); if(!allowedOrigin(origin,request.nextUrl.origin)) throw new AuditError('INVALID_INPUT',400,'請從本站送出問題。');
     const text=await request.text(); if(Buffer.byteLength(text,'utf8')>8192) throw new AuditError('INVALID_INPUT',400,'問題最多500字。');
     let body:unknown; try {body=JSON.parse(text);} catch {throw new AuditError('INVALID_INPUT',400,'請輸入有效問題。');}
     const parsed=InputSchema.safeParse(body); if(!parsed.success) throw new AuditError('INVALID_INPUT',400,'請輸入1–500字的問題，並提供有效 requestId。');
