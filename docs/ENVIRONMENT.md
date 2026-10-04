@@ -1,5 +1,7 @@
 # Firebase／App Hosting 已建立環境
 
+**目前：已上線，Secret version 1 與 Firestore 控制已啟用。** 正式網址、驗證與費用範圍见 [DELIVERY.md](DELIVERY.md)。以下為開工前的真實環境準備紀錄，保留當時狀態，不代表現在尚未實作。
+
 2026-10-04（Asia/Taipei），依使用者「先建立 Firebase 環境，帳單掛 BotsUP 共用」的明確授權執行。**這是活動開始前完成的環境準備，應如實保留紀錄；不是網站已實作或部署成功。** 網站程式、資料匯入、Git 與 OpenAI 呼叫仍等待使用者開工指令。
 
 ## 固定識別：直接使用，不另建專案

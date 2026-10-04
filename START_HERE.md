@@ -1,6 +1,6 @@
 # 新隊友先看：askPuma
 
-2026-10-04，Asia/Taipei。Vincent＋兩位夥伴；本輪完成最新工程規劃，網站仍未實作。
+2026-10-04，Asia/Taipei。Vincent＋兩位夥伴；網站已公開上線，先讀 [交付紀錄](docs/DELIVERY.md)；下方保留原始分工與準備紀錄。
 
 ## 一句話
 
@@ -28,7 +28,7 @@
 
 一個新題目先交：題目、想吐槽的點、原來源 URL＋日期、短原句、前後文、大字候選、旁白、不能推論什麼、是否核對。搞笑純創作也要標，不冒稱本人說法。負責人核對後再進正式案例，夥伴不必處理 schema 或 key。
 
-## 已準備與尚未完成
+## 開工前準備紀錄（歷史狀態）
 
 Firebase project askpuma-prod、App Hosting backend askpuma、Firestore 已建立在 asia-east1，掛 BotsUP 共用帳單；Secret 容器與 IAM 已準備。使用者已備妥 OpenAI key，但 runtime 放置與模型權限尚未核對。預分配 App Hosting URL 不是網站已上線。
 

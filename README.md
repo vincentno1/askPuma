@@ -6,9 +6,9 @@
 
 **新加入的真人隊友先讀 [兩分鐘導讀](START_HERE.md)**：產品想法、目前進度、三人建議分工與今天截止時間。
 
-**最新方向：** [01 首頁已認可](design/proposals/README.md)，[新版 02 原貼文回答／03 動漫玩梗提案已生成](design/proposals/README-v2.md)。回答頁要 [大字、簡潔、原貼文為主，細節按開](docs/RESULT_DESIGN.md)，另支援 [動漫玩梗題](docs/HUMOR_MODE.md)。[攻防研究](docs/ATTACK_RESEARCH.md) 已整理官網 19 篇回應、7 項延伸議題與本人貼文候選。網站仍尚未實作。
+**最新方向：** [01 首頁已認可](design/proposals/README.md)，[新版 02 原貼文回答／03 動漫玩梗提案已生成](design/proposals/README-v2.md)。回答頁要 [大字、簡潔、原貼文為主，細節按開](docs/RESULT_DESIGN.md)，另支援 [動漫玩梗題](docs/HUMOR_MODE.md)。[攻防研究](docs/ATTACK_RESEARCH.md) 已整理官網 19 篇回應、7 項延伸議題與本人貼文候選。實作已完成，正式網址與驗證見 [交付紀錄](docs/DELIVERY.md)。
 
-這是 DevDay Exchange Community Hack Day: Taipei 的規劃專案。**2026-10-04 已依使用者授權先建立 Firebase／App Hosting 環境與設定；尚未建立網站程式、安裝依賴、初始化 Git 或做應用部署。** 已建立的資源詳見 [環境交接](docs/ENVIRONMENT.md)，開工後直接沿用。
+這是 DevDay Exchange Community Hack Day: Taipei 的作品。**已公開上線：[該怎麼攻擊 Puma？](https://askpuma--askpuma-prod.asia-east1.hosted.app)**。賽前規劃／雲端環境與活動中程式提交保留真實時間；目前完成狀態以 [交付紀錄](docs/DELIVERY.md) 為準。
 
 - 規劃日期：2026-10-03，Asia/Taipei。
 - 預定實作開始：**2026-10-04 13:00，Asia/Taipei**。
@@ -18,7 +18,7 @@
 - 真人隊伍：Vincent＋兩位新夥伴；建議分工見 START_HERE.md，A／B／C／D 是技術角色。
 - 立場：民間支持 Puma 的詼諧政治網站；證據決定每個結論。
 
-**最新工程方案已完成：** [完整實作方案](docs/IMPLEMENTATION_PLAN.md)、[三題 Demo／題卡／58 秒腳本](docs/DEMO_CASES.md)、[契約 v2](docs/CONTRACTS.md)。使用者已準備 OpenAI key（runtime 尚未核對），資料入口已確認為公開貼文索引；網站仍未實作。
+**最新工程方案已完成：** [完整實作方案](docs/IMPLEMENTATION_PLAN.md)、[三題 Demo／題卡／58 秒腳本](docs/DEMO_CASES.md)、[契約 v2](docs/CONTRACTS.md)。OpenAI Secret 與正式 runtime 已接通，貼文資料已匯入；三題 Demo 和自由輸入均可使用。
 
 ## 新 session 的最短接手路徑
 
@@ -70,4 +70,4 @@
 
 > 現在已經 2026-10-04 13:00（Asia/Taipei），開始依 askPuma 文件實作。先讀 AGENTS.md、docs/IMPLEMENTATION_PLAN.md、docs/DEMO_CASES.md、docs/CONTRACTS.md、docs/ENVIRONMENT.md 和 docs/SESSIONS.md。你是 A：整合與部署。建立新的 Git 專案與共同骨架，啟動前端 B、後端 C、資料 D 三個平行工作。沿用已建立的 Firebase 專案 askpuma-prod／App Hosting backend askpuma，使用 Firestore、OpenAI API，首日 API 預算 US$50。以 docs/IMPLEMENTATION_PLAN.md 的當下壓縮排程立即交第一批，14:10 產生最終部署候選，14:30 提交。賽前已準備規劃文件與雲端環境，請如實保留實作紀錄。
 
-若是人工開多個 Codex sessions，先由 A 建好共用骨架並提交，再讓其餘 sessions 從同一個 commit 的獨立 worktree 開始。雲端環境已先建立；網站實作仍不自動啟動。
+若是人工開多個 Codex sessions，先由 A 建好共用骨架並提交，再讓其餘 sessions 從同一個 commit 的獨立 worktree 開始。以上為開工時使用的歷史指令；網站目前已完成實作。
