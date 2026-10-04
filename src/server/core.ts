@@ -48,8 +48,11 @@ export function localSources(): SourceRecord[] {
 export function matchPrepared(query: string) {
   return preparedCases().find(c=>c.status==='ready' && c.reviewedAt && c.dataVersion===DATA_VERSION && [c.canonicalQuery,...c.reviewedAliases].some(q=>normalizeQuery(q)===normalizeQuery(query)));
 }
+const RETRIEVAL_STOP_WORDS = ['pumashen','沈伯洋','puma','有沒有','是不是','會不會','能不能','沒有','是否','有無','為什麼','什麼','怎麼','這個','那個','一個','他的','本人','支持','反對','政策','市政'];
 function terms(text:string) {
-  const normalized=text.toLowerCase(); const terms=new Set(normalized.match(/[a-z0-9]{2,}|[\p{Script=Han}]{2,}/gu) || []);
+  // Remove generic names/topics only from scoring; the question and cache retain every word.
+  let normalized=text.toLowerCase();
+  for (const word of RETRIEVAL_STOP_WORDS) normalized=normalized.split(word).join(' '); const terms=new Set(normalized.match(/[a-z0-9]{2,}|[\p{Script=Han}]{2,}/gu) || []);
   for(const run of normalized.match(/[\p{Script=Han}]+/gu)||[]) for(let i=0;i<run.length-1;i++) terms.add(run.slice(i,i+2));
   return [...terms];
 }
@@ -58,7 +61,7 @@ export function retrieve(query:string, records:SourceRecord[], limit=8): SourceR
   const scored=records.flatMap(source=>source.excerpts.flatMap(excerpt=>{
     const text=excerpt.text.slice(0,1200); const haystack=`${source.title} ${text}`.toLowerCase();
     const score=keywords.reduce((total,word)=>total+(haystack.includes(word)?(word.length>2?3:1):0),0);
-    return score>=2?[{source,excerpt:{...excerpt,text},score}]:[];
+    return score>=1?[{source,excerpt:{...excerpt,text},score}]:[];
   })).sort((a,b)=>b.score-a.score || (a.source.reviewStatus==='checked'?-1:1));
   const chosen=new Map<string,SourceRecord>(); let count=0;
   for(const item of scored) {
