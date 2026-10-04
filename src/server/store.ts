@@ -3,7 +3,7 @@ import { getFirestore, type Firestore } from 'firebase-admin/firestore';
 import { AuditResultSchema, type AuditResult } from '@/contracts/audit';
 import { AuditError, hash, paused } from './core';
 
-export type ServiceConfig={enableNewAnalysis:boolean;enableWebSearch:boolean;dailyBudgetUSD:number;maxPaidRequestsPerDay:number;reservationUSD:number;sessionCookieSecret:string};
+export type ServiceConfig={budgetDate:string|null;enableNewAnalysis:boolean;enableWebSearch:boolean;dailyBudgetUSD:number;maxPaidRequestsPerDay:number;reservationUSD:number;sessionCookieSecret:string};
 export function database():Firestore {
   const app=getApps()[0] || initializeApp({credential:applicationDefault(),projectId:process.env.GOOGLE_CLOUD_PROJECT || process.env.GCLOUD_PROJECT || process.env.FIREBASE_PROJECT_ID || 'askpuma-prod'});
   return getFirestore(app);
@@ -13,7 +13,8 @@ export async function serviceConfig():Promise<ServiceConfig> {
     const doc=await database().doc('config/service').get(); const d=doc.data();
     const secret=process.env.SESSION_COOKIE_SECRET || d?.sessionCookieSecret;
     if(!d || typeof d.enableNewAnalysis!=='boolean' || typeof d.enableWebSearch!=='boolean' || typeof secret!=='string' || secret.length<32) throw paused();
-    return {enableNewAnalysis:d.enableNewAnalysis,enableWebSearch:d.enableWebSearch,dailyBudgetUSD:Math.min(45,positive(d.dailyBudgetUSD,45)),maxPaidRequestsPerDay:Math.min(40,positive(d.maxPaidRequestsPerDay,40)),reservationUSD:Math.max(1,positive(d.reservationUSD,1)),sessionCookieSecret:secret};
+    const budgetDate=typeof d.budgetDate==='string'?d.budgetDate:null;
+    return {budgetDate,enableNewAnalysis:d.enableNewAnalysis && budgetDate===taipeiDay(Date.now()),enableWebSearch:d.enableWebSearch,dailyBudgetUSD:Math.min(45,positive(d.dailyBudgetUSD,45)),maxPaidRequestsPerDay:Math.min(40,positive(d.maxPaidRequestsPerDay,40)),reservationUSD:Math.max(1,positive(d.reservationUSD,1)),sessionCookieSecret:secret};
   } catch { throw paused(); }
 }
 function positive(n:unknown,fallback:number) { return typeof n==='number' && Number.isFinite(n) && n>0?n:fallback; }
@@ -44,7 +45,9 @@ export async function reserve(key:string,session:string,ip:string,requestId:stri
   try {
     return await db.runTransaction(async tx=>{
       const [l,r,u,g,s,i,c,cached]=await tx.getAll(lock,request,usage,global,sessionRef,ipRef,configRef,cache);
-      const live=c.data(); if(!live || live.enableNewAnalysis!==true || !config.enableNewAnalysis) throw paused();
+      const live=c.data();
+      if(!live || live.budgetDate!==day || config.budgetDate!==day) throw new AuditError('ANALYSIS_PAUSED',503,'首日新分析已結束，仍可查看已整理案例與已儲存回答。');
+      if(live.enableNewAnalysis!==true || !config.enableNewAnalysis) throw paused();
       if(cached.data()?.expiresAt>now || l.data()?.expiresAt>now) throw new AuditError('QUERY_IN_PROGRESS',409,'相同問題正在整理或已完成，請稍後再試。',2);
       if(r.exists && r.data()?.expiresAt>now) {
         if(r.data()?.queryKey!==key) throw new AuditError('INVALID_INPUT',400,'同一 requestId 不能用於不同問題。');
