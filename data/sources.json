@@ -1,1 +1,140 @@
-[]
+[
+  {
+    "id": "S01",
+    "title": "〖撲馬想想〗柯震東震出我國毒品政策的爛瘡",
+    "url": "https://www.thinkingtaiwan.net/content/3055",
+    "publisher": "想想論壇",
+    "author": "撲馬（沈伯洋）",
+    "publishedAt": "2014-09-01",
+    "datePrecision": "day",
+    "retrievedAt": "2026-10-04T05:54:02.808Z",
+    "kind": "primary_statement",
+    "reviewStatus": "checked",
+    "origin": "direct",
+    "platform": "website",
+    "excerpts": [
+      {
+        "id": "e1",
+        "text": "建立社區中心，提供吸毒者毒品與乾淨的針頭，並導入社工機制予以協助吧？",
+        "locator": "「毒品問題。我們可以怎麼做？」節中，談及B政策之後的段落"
+      }
+    ],
+    "contextNote": "全文討論刑罰、除罪化、社會因素與校園篩檢；這一段確實同時提到毒品與針頭，不能改寫成只有清潔針具，也不能直接把供毒等同替代治療。"
+  },
+  {
+    "id": "S03",
+    "title": "臺北市清潔針具佈點名單",
+    "url": "https://data.taipei/dataset/detail?id=5e53353a-4799-4b02-8922-cf81bb6fbf95",
+    "publisher": "臺北市衛生局",
+    "author": null,
+    "publishedAt": null,
+    "datePrecision": "unknown",
+    "retrievedAt": "2026-10-04T05:54:02.808Z",
+    "kind": "official_policy",
+    "reviewStatus": "checked",
+    "origin": "direct",
+    "platform": "website",
+    "excerpts": [
+      {
+        "id": "e1",
+        "text": "臺北市清潔針具交換衛教諮詢站名單。",
+        "locator": "詮釋資料／資料集描述"
+      }
+    ],
+    "contextNote": "核對資料頁名稱、提供機關與描述，未下載CSV或驗證點位數；更新日不等於政策首次實施日。不能由服務存在推論市長不知道或反對。",
+    "updatedAt": "2026-09-03"
+  },
+  {
+    "id": "S04",
+    "title": "Needle and syringe programmes for people who inject drugs: operational guide",
+    "url": "https://www.who.int/westernpacific/publications/i/item/9789240116214",
+    "publisher": "World Health Organization",
+    "author": null,
+    "publishedAt": "2026-01-30",
+    "datePrecision": "day",
+    "retrievedAt": "2026-10-04T05:54:02.808Z",
+    "kind": "research",
+    "reviewStatus": "checked",
+    "origin": "direct",
+    "platform": "website",
+    "excerpts": [
+      {
+        "id": "e1",
+        "text": "needle and syringe programmes for people who inject drugs as part of comprehensive harm reduction responses.",
+        "locator": "Overview，第一段連續短摘錄"
+      }
+    ],
+    "contextNote": "WHO原始出版頁將針具計畫納入減害；只核對出版頁摘要，未以此推論杜絕毒品、台北本地效果或所有毒品政策有效。"
+  },
+  {
+    "id": "archive-829059d016f430dee65d",
+    "title": "沈伯洋談針頭交換與治療計畫",
+    "url": "https://www.threads.com/t/DeBlQ6YlHK1",
+    "publisher": "沈伯洋公開帳號",
+    "author": "沈伯洋",
+    "publishedAt": "2026-10-03T08:01:23+00:00",
+    "datePrecision": "day",
+    "retrievedAt": "2026-10-04T05:53:14.278Z",
+    "kind": "primary_statement",
+    "reviewStatus": "imported_unchecked",
+    "origin": "mayor2026_archive",
+    "platform": "threads",
+    "upstreamId": "threads:https://www.threads.com/t/DeBlQ6YlHK1",
+    "archiveUrl": "https://mayor2026.observe.tw/taipei/shen-poyang/",
+    "excerpts": [
+      {
+        "id": "e1",
+        "text": "怎麼揪？\n有一個做法\n叫做針頭交換和\n美沙冬治療計劃",
+        "locator": "保存全文中「要不要揪出毒癮者？」之後段落"
+      }
+    ],
+    "contextNote": "公開索引保存文字，Threads原頁本次工具無法讀取；台灣時間2026-10-03 16:01:23。原貼文另有對市長的指控，本案例未據此確認其知識或立場。保留上游原字「美沙冬」。"
+  },
+  {
+    "id": "archive-edc097955fdb126d7854",
+    "title": "沈伯洋教育政見中的營養午餐方案",
+    "url": "https://www.instagram.com/p/Dd-i8hVEjO_/",
+    "publisher": "沈伯洋公開帳號",
+    "author": "沈伯洋",
+    "publishedAt": "2026-10-02T03:43:24+00:00",
+    "datePrecision": "day",
+    "retrievedAt": "2026-10-04T05:53:14.278Z",
+    "kind": "primary_statement",
+    "reviewStatus": "imported_unchecked",
+    "origin": "mayor2026_archive",
+    "platform": "instagram",
+    "upstreamId": "instagram:https://www.instagram.com/p/Dd-i8hVEjO_/",
+    "archiveUrl": "https://mayor2026.observe.tw/taipei/shen-poyang/",
+    "excerpts": [
+      {
+        "id": "e1",
+        "text": "我主張經費隨物價調整，保留學校與家長討論自費加菜的彈性",
+        "locator": "保存全文，營養午餐與食安段落連續短摘錄"
+      }
+    ],
+    "contextNote": "公開索引保存文字，Instagram原頁本次讀取遭限流；台灣時間2026-10-02 11:43:24。本段說明當日主張，不能單獨證明9月17日完整發言或歷史立場一致。"
+  },
+  {
+    "id": "L02",
+    "title": "〖闢謠〗免費保底、自費加價可並存 沈伯洋說法始終一致",
+    "url": "https://puma.taipei/fact-checks/fact-check-19",
+    "publisher": "沈伯洋競選辦公室",
+    "author": "競選辦公室 政策組",
+    "publishedAt": "2026-10-02",
+    "datePrecision": "day",
+    "retrievedAt": "2026-10-04T05:54:02.808Z",
+    "kind": "primary_statement",
+    "reviewStatus": "checked",
+    "origin": "direct",
+    "platform": "website",
+    "excerpts": [
+      {
+        "id": "e1",
+        "text": "免費是基本保障，自費加價是品質選項，兩者並存。",
+        "locator": "「事實是」段落連續短摘錄"
+      }
+    ],
+    "contextNote": "本人競選網站的自我澄清，可確認目前方案說明；文中對9月17日發言的回顧不是完整原始影音，也不是歷史一致性的獨立證明。",
+    "updatedAt": "2026-10-02T13:38:00+08:00"
+  }
+]
