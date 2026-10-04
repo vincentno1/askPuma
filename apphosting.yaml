@@ -1,0 +1,11 @@
+# Applies at the first application build/rollout; no application deployed yet.
+runConfig:
+  minInstances: 0
+  maxInstances: 2
+  concurrency: 8
+  cpu: 1
+  memoryMiB: 1024
+
+# OPENAI_API_KEY exists in Secret Manager but has no version yet.
+# After supplying the real key, add a RUNTIME-only secret reference here.
+# Never put the key value or NEXT_PUBLIC_OPENAI_API_KEY in this file.
