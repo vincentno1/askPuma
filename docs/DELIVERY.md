@@ -16,9 +16,10 @@
 
 - `node src/server/backend.test.cjs`：16 項通過，含原文引用、否定詞快取、泛詞檢索、住宅政策、額度／併發／到期阻擋、未核對證據降級。
 - 正式站 health 200；三題由實際 UI 操作，來源展開可用。
-- 自由住宅題已真實呼叫模型並引用 POL01 官網政策；重問命中 saved 快取。無資料的火星題顯示證據不足。
+- 自由住宅題已真實呼叫模型並引用 POL01 官網政策；重問命中 saved 快取。無資料的火星題顯示證據不足。正式站零索引題另外確認 web 搜尋＋整理共2次模型呼叫、searchUsed=true，結果保留不足判定。
 - `npm run build`：最終候選通過，含 TypeScript、頁面生成與 route build。正式站自由題「Puma 的青年住宅政策是什麼？」回覆 HTTP 200 / generated / v3，引用 POL01，並誠實保留具體辦法不足的限制。
 - production 依賴 audit 上次結果 0 vulnerabilities。
+- 桌面與390px手機實際畫面已保存於 screenshots/；手機 scrollWidth=innerWidth=390。模型說明中的來源代碼已改為來源名稱／中文狀態，不改動原文引用。
 
 ## 費用與已知範圍
 
@@ -41,3 +42,11 @@ firebase deploy --only apphosting:askpuma --project=askpuma-prod --account=vince
 ```
 
 新增題卡先核對 data/cases.json、data/sources.json 契約，不把未核對來源升成 checked；資料改版需同步 import metadata 和案例 dataVersion。
+
+## 最終部署
+
+2026-10-04 14:23:03（Asia/Taipei），直接讀取 App Hosting rollout `build-2026-10-04-005`，確認 `state=SUCCEEDED`。實際部署來源 commit `5aa5b00`（包含前端中文說明修正 `f65eb13`），Cloud Build `ae0620c9-20be-4273-aa6d-0e9b6eb4ef42` SUCCESS。
+
+部署 CLI 曾過早回報前一輪完成，並有一次上一輪進行中造成409；沒有把 CLI exit code 當成最終驗證。以雲端 rollout 成功及正式頁面實際載入為準。公開 health HTTP 200。
+
+最終畫面核對：公開站已載入新 page chunk，住宅快取回答已把 POL01／imported_unchecked 轉成中文名稱；原文摘錄不變。Cloud Run 最新 ready revision 與100% traffic 均為 build-2026-10-04-005。首頁實際截圖：screenshots/home-live.jpg；爆炸頭：screenshots/afro-live.jpg；手機午餐：screenshots/lunch-mobile-live.jpg。正式瀏覽器已留在首頁，測試 viewport override 已恢復。

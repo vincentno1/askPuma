@@ -1,5 +1,8 @@
 # 服務架構與運作
 
+**目前已實作並公開上線。** 下面保留工程規劃；實际完成範圍、檔案、正式站與預算日期控制以 [DELIVERY.md](DELIVERY.md) 為準。
+
+
 **2026-10-04 最新施工基準：** 先讀 [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md)、[DEMO_CASES.md](DEMO_CASES.md)、[CONTRACTS.md v2](CONTRACTS.md)。Demo 固定針具 → 爆炸頭 → 午餐；網站由我們／Codex 做，真人夥伴補題與查核。早期選題與已過時間表以新方案覆蓋。本文仍是待實作設計。
 
 本文描述目標架構，尚未實作或測試。欄位以 CONTRACTS.md 為準，優先級以 PLAN.md 為準。
