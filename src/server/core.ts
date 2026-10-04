@@ -21,7 +21,7 @@ export function allowedOrigin(origin: string | null, requestOrigin: string) {
   if (!origin) return true;
   const allowed = new Set(['https://askpuma--askpuma-prod.asia-east1.hosted.app']);
   const configured = process.env.PUBLIC_SITE_ORIGIN;
-  if (configured) { try { const url = new URL(configured); if(url.protocol==='https:' && url.origin===configured) allowed.add(configured); } catch { /* malformed configured origin is ignored */ } }
+  if (configured) { try { const url = new URL(configured); const loopback = ['localhost','127.0.0.1','[::1]'].includes(url.hostname); if((url.protocol==='https:' || (url.protocol==='http:' && loopback)) && url.origin===configured) allowed.add(configured); } catch { /* malformed configured origin is ignored */ } }
   if (process.env.NODE_ENV !== 'production') {
     try { const url = new URL(requestOrigin); if (['localhost','127.0.0.1','[::1]'].includes(url.hostname) && ['http:','https:'].includes(url.protocol)) allowed.add(url.origin); } catch { /* invalid internal URL is not trusted */ }
   }
