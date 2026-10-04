@@ -7,3 +7,5 @@
 /* Keep source text intact while allowing copied social line breaks to flow. */
 blockquote{white-space:normal}
 @media(max-width:767px){.playful-result .result-mascot{width:48%}.playful-roast{width:54%;font-size:22px;line-height:1.6}.playful-disclaimer{max-width:53%}}
+
+.playful-roast>span{display:block}
