@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-10-05T12:01:17.171552+08:00",
+  "project_id": "askpuma-prod",
+  "project_number": "639898024447",
+  "lifecycle_state": "DELETE_REQUESTED",
+  "billing_enabled": false,
+  "shared_billing_account_open": true,
+  "hosted_app_root_http_status": 404,
+  "hosted_app_health_http_status": 404,
+  "worktrees_removed": [
+    "askPuma-backend",
+    "askPuma-data",
+    "askPuma-ui"
+  ],
+  "github_preserved": "https://github.com/vincentno1/askPuma",
+  "openai_key_revocation": "VERIFIED: platform key askPuma status Revoked",
+  "openai_key_dedicated_confirmed_by_user": true,
+  "downloads_credential_deleted": true,
+  "local_env_key_removed": true,
+  "remaining_exact_key_files": [],
+  "openai_key_screenshot": "docs/evidence/openai-key-revoked-2026-10-05.png",
+  "openai_platform_displayed_monthly_spend_usd": 0.02,
+  "openai_spend_is_final_invoice": false,
+  "main_worktree_status": "Authorized local removal after this archive commit is pushed and verified on GitHub"
+}

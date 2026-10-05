@@ -4,7 +4,9 @@
 
 結合公開貼文、政策資料與 OpenAI，用大字結論、原文佐證和動漫吐槽回應質疑。認真題看證據，搞笑題開戰鬥型態。
 
-**[立即試玩](https://askpuma--askpuma-prod.asia-east1.hosted.app/)** · [交付與驗證紀錄](docs/DELIVERY.md) · [一分鐘 Demo 腳本](docs/DEMO_CASES.md)
+**專案已於 2026-10-05 下線，網站不再提供服務。** 此 repo 保留 Hack Day 程式碼、資料、設計及活動紀錄。
+
+[下線與清理紀錄](docs/DECOMMISSION.md) · [交付與驗證紀錄](docs/DELIVERY.md) · [一分鐘 Demo 腳本](docs/DEMO_CASES.md)
 
 ![網站首頁](docs/screenshots/home-live.jpg)
 
